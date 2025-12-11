@@ -1,0 +1,324 @@
+@charset "UTF-8";
+/*-----------------------------------*/
+/* 
+    RESET CSS
+    http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+    License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*-----------------------------------*/
+/*
+	Fonctions diverses (ex: calcul de position)
+*/
+/*-----------------------------------*/
+/*
+    Variables (palette de couleurs, polices de texte, etc...)
+*/
+/*-----------------------------------*/
+/*
+    Polices
+*/
+/* rubik-300 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../assets/fonts/rubik/rubik-v31-latin-300.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* rubik-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets/fonts/rubik/rubik-v31-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* rubik-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../assets/fonts/rubik/rubik-v31-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* rubik-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../assets/fonts/rubik/rubik-v31-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/*-----------------------------------*/
+/*
+    Palette de couleurs
+*/
+/* Menu de navigation */
+/* Arrière-plan du site */
+/* Couleurs de texte */
+/*-----------------------------------*/
+/*
+    Effets
+*/
+/* Ombres de texte */
+/* Ombres d'images */
+/* Ombres d'éléments */
+/*-----------------------*/
+html {
+  scroll-behavior: smooth;
+}
+
+.image {
+  color: white;
+  font-family: "sans-serif";
+}
+
+.body--index, .body--history {
+  --bg-color-first-start: #5d06d6;
+  --bg-color-first-end: #0B0215;
+  --bg-color-last-start: #F0BFFF;
+  --bg-color-last-end: #BB76FF;
+  --bg-color-current-start: var(--bg-color-first-start);
+  --bg-color-current-end: var(--bg-color-first-end);
+  background: linear-gradient(125deg, var(--bg-color-current-start) 0%, var(--bg-color-current-end) 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+/* Menu de navigation */
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  align-items: center;
+  flex-wrap: wrap;
+  background: linear-gradient(90deg, #3c3ade, #5d06d6);
+  box-shadow: 0 10px 12px rgba(0, 0, 0, 0.4);
+}
+@media screen and (max-width: 64rem) {
+  .header {
+    justify-content: center;
+    -moz-column-gap: 8rem;
+         column-gap: 8rem;
+    padding: 1rem 1rem;
+  }
+}
+.logo-sitename {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+.logo-sitename__title {
+  color: white;
+  font-family: "Rubik";
+  font-weight: 500;
+  font-size: 2rem;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+.logolink-logo {
+  height: 3rem;
+  filter: drop-shadow(12px 12px 12px rgba(0, 0, 0, 0.4));
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
+  row-gap: 1.5rem;
+}
+@media screen and (max-width: 64rem) {
+  .nav__list {
+    padding-top: 2rem;
+  }
+}
+.nav__link {
+  font-family: "Rubik";
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: white;
+  text-decoration: none;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
+}
+.nav__link--current {
+  text-decoration: underline;
+}
+.nav__flag {
+  width: 3rem;
+  border-radius: 0.5rem;
+  border: 1px solid white;
+  filter: drop-shadow(12px 12px 12px rgba(0, 0, 0, 0.4));
+}
+
+/*-----------------------*/
+/* Page index */
+.index-sec-title {
+  padding: 0 5rem;
+}
+.index-sec-title__hello {
+  padding-top: clamp(4rem, 10vw, 8rem);
+}
+.index-sec-title__intro-pictures {
+  padding-top: 5rem;
+}
+
+.hello {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-family: "Rubik";
+  text-shadow: 12px 12px 16px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+.hello__title {
+  /*font-size: px2rem(128);*/
+  font-size: clamp(4rem, 10vw, 8rem);
+  font-weight: 500;
+  padding-bottom: 1rem;
+}
+.hello__subtitle {
+  font-size: clamp(1.5rem, 3.75vw, 3rem);
+  font-weight: 400;
+}
+
+.intro-pictures {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  -moz-column-gap: 6rem;
+       column-gap: 6rem;
+  row-gap: 2rem;
+  /*Décaler la deuxième image légèrement
+  :nth-child(2n) {
+  	padding-top: px2rem(48);
+  }*/
+}
+@media screen and (max-width: 64rem) {
+  .intro-pictures {
+    -moz-column-gap: 5rem;
+         column-gap: 5rem;
+  }
+}
+.intro-pictures__img {
+  width: clamp(12rem, 21.3vw, 16rem);
+  border-radius: 2rem;
+  border: solid rgba(255, 177, 250, 0.35);
+  border-width: 0.5rem;
+  filter: drop-shadow(12px 12px 12px rgba(0, 0, 0, 0.4));
+}
+
+/* Page histoire */
+.history-sec-intro {
+  padding: 0 2rem;
+}
+.history-sec-intro__intro {
+  padding-top: clamp(4rem, 10vw, 8rem);
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-family: "Rubik";
+  text-shadow: 12px 12px 16px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+.intro__title {
+  /*font-size: px2rem(128);*/
+  font-size: clamp(4rem, 10vw, 8rem);
+  font-weight: 500;
+  padding-bottom: 1rem;
+}
+.intro__subtitle {
+  font-size: clamp(1.5rem, 3.75vw, 3rem);
+  font-weight: 400;
+  padding-bottom: 3rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+}
+
+.a-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10rem;
+  height: 3rem;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  font-family: "Rubik";
+  font-weight: 300;
+  font-size: 1.125rem;
+  border: solid white 0.0625rem;
+  border-radius: 2rem;
+  box-shadow: 0 10px 12px rgba(0, 0, 0, 0.4);
+}
+.a-button--transparent:not(:hover) {
+  background: none;
+  color: white;
+}
+.a-button:hover {
+  background-color: #F6F6F6;
+  border-color: #F6F6F6;
+}/*# sourceMappingURL=style.css.map */

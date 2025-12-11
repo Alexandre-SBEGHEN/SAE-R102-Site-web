@@ -1,0 +1,281 @@
+/*-----------------------------------*/
+/* 
+    RESET CSS
+    http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+    License: none (public domain)
+*/
+@use 'reset.scss' as *;
+/*-----------------------------------*/
+/*
+	Fonctions diverses (ex: calcul de position)
+*/
+@use 'util.scss' as *;
+/*-----------------------------------*/
+/*
+    Variables (palette de couleurs, polices de texte, etc...)
+*/
+@use 'variables.scss' as *;
+
+/*-----------------------*/
+html {
+	scroll-behavior: smooth;
+}
+
+.image {
+	color: white;
+	font-family: 'sans-serif';
+}
+
+.body--index, .body--history {
+	//Créer les variables pour pouvoir y accéder et les modifier en JS
+	--bg-color-first-start: #{$colorpalette-background-gradient-first-start};
+	--bg-color-first-end: #{$colorpalette-background-gradient-first-end};
+	--bg-color-last-start: #{$colorpalette-background-gradient-last-start};
+	--bg-color-last-end: #{$colorpalette-background-gradient-last-end};
+	--bg-color-current-start: var(--bg-color-first-start);
+	--bg-color-current-end: var(--bg-color-first-end);
+
+	background: linear-gradient($colorpalette-background-gradient-angle, var(--bg-color-current-start) 0%, var(--bg-color-current-end) 100%);
+	background-attachment: fixed;
+	min-height: 100vh;
+}
+/* Menu de navigation */
+.header {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 3rem;
+        align-items: center;
+        flex-wrap: wrap;
+		
+        @media screen and (max-width: px2rem(1024)) {
+            justify-content: center;
+            column-gap: px2rem(128);
+			padding: 1rem 1rem;
+        }
+
+		background: linear-gradient($colorpalette-navbar-gradient-angle, $colorpalette-navbar-gradient-start, $colorpalette-navbar-gradient-end);
+
+		box-shadow: $effect-element-shadow-vertical;
+		// .header__logo-sitename
+        
+		&__logo-sitename {
+		}
+
+		// .header__nav
+
+		&__nav {
+		}
+}
+
+.logo-sitename {
+    display: flex;
+    gap: px2rem(48);
+    align-items: center;
+
+		// .logo-sitename__logo
+
+		&__logo {
+			
+		}
+
+		// .logo-sitename__title
+
+		&__title {
+			color: $colorpalette-text-light;
+			font-family: 'Rubik';
+			font-weight: 500;
+			font-size: px2rem(32);
+			text-shadow: $effect-text-shadow-tiny;
+		}
+}
+.logolink-logo {
+	height: px2rem(48);
+	filter: $effect-img-shadow-tiny;
+}
+
+.nav {
+		// .nav__list
+
+		&__list {
+			@media screen and (max-width: px2rem(1024)) {
+				padding-top: px2rem(32);
+			}
+
+            display: flex;
+            align-items: center;
+			justify-content: center;
+			flex-wrap: wrap;
+            column-gap: px2rem(48);
+			row-gap: px2rem(24);
+		}
+
+		// .nav__link
+
+		&__link {
+			font-family: 'Rubik';
+			font-weight: 400;
+			font-size: px2rem(20);
+			color: $colorpalette-text-light;
+			text-decoration: none;
+
+			text-shadow: $effect-text-shadow-tiny;
+
+			// .nav__link--current
+
+			&--current {
+				text-decoration: underline;
+			}
+		}
+
+		// .nav__flag
+		&__flag {
+            width: px2rem(48);
+			border-radius: px2rem(8);
+			border: 1px solid white;
+			filter: $effect-img-shadow-tiny;
+		}
+}
+/*-----------------------*/
+/* Page index */
+.index-sec-title {
+		padding: 0 5rem;
+
+		&__hello {
+			padding-top: clamp(4rem, 10vw, 8rem);
+		}
+
+		&__intro-pictures {
+			padding-top: px2rem(80);
+		}
+}
+.hello {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		color: $colorpalette-text-light;
+		font-family: 'Rubik';
+
+		text-shadow: $effect-text-shadow-big;
+		text-align: center;
+
+		// .hello__title
+
+		&__title {
+			/*font-size: px2rem(128);*/
+			font-size: clamp(4rem, 10vw, 8rem);
+			font-weight: 500;
+			padding-bottom: px2rem(16);
+		}
+		// .hello__subtitle
+
+		&__subtitle {
+			font-size: clamp(1.5rem, 3.75vw, 3rem);
+			font-weight: 400;
+		}
+}
+.intro-pictures {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	column-gap: px2rem(96);
+	row-gap: px2rem(32);
+
+	
+	@media screen and (max-width: px2rem(1024)) {
+		column-gap: px2rem(80);
+	}
+
+	&__img {
+		width: clamp(12rem, 21.3vw, 16rem);
+		
+
+		border-radius: px2rem(32);
+		border: solid rgba(255, 177, 250, 0.35);
+		border-width: px2rem(8);
+
+		filter: $effect-img-shadow-tiny;
+
+		
+	}
+
+	/*Décaler la deuxième image légèrement
+	:nth-child(2n) {
+		padding-top: px2rem(48);
+	}*/
+}
+/* Page histoire */
+.history-sec-intro {
+		padding: 0 2rem;
+
+		&__intro {
+			padding-top: clamp(4rem, 10vw, 8rem);
+		}
+}
+.intro {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	color: $colorpalette-text-light;
+	font-family: 'Rubik';
+
+	text-shadow: $effect-text-shadow-big;
+	text-align: center;
+
+	// .hello__title
+
+	&__title {
+		/*font-size: px2rem(128);*/
+		font-size: clamp(4rem, 10vw, 8rem);
+		font-weight: 500;
+		padding-bottom: px2rem(16);
+	}
+	// .hello__subtitle
+
+	&__subtitle {
+		font-size: clamp(1.5rem, 3.75vw, 3rem);
+		font-weight: 400;
+		padding-bottom: px2rem(48);
+	}
+}
+.buttons {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: px2rem(16) px2rem(32);
+}
+
+
+.a-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: px2rem(160);
+	height: px2rem(48);
+
+	background-color: white;
+	color: black;
+	text-decoration: none;
+
+	font-family: 'Rubik';
+	font-weight: 300;
+	font-size: px2rem(18);
+
+	border: solid white px2rem(1);
+	border-radius: px2rem(32);
+
+	box-shadow: $effect-element-shadow-vertical;
+
+	&--transparent:not(:hover) {
+		background: none;
+		color: white;
+	}
+
+	&:hover {
+		background-color: #F6F6F6;
+		border-color: #F6F6F6;
+	}
+}

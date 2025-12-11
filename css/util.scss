@@ -1,0 +1,30 @@
+// Fonction pour convertir les valeurs en px en rem sans `sass:math`
+@function px2rem($sizes, $base : 16px) {
+    $rem-values: ();
+
+    @each $size in $sizes {
+        // --- Nettoyage et Validation (Même logique que précédemment) ---
+        // Retire l'unité et la remet en px pour s'assurer de la bonne base de calcul.
+        $size-num: $size / ($size * 0 + 1);
+        $size: $size-num * 1px;
+        
+        // --- Calcul REM ---
+        // Utilisation de l'opérateur de division standard `/`
+        $rem-value: ($size / $base) * 1rem;
+        
+        $rem-values: append($rem-values, $rem-value);
+    }
+
+    // Retourne une liste de valeurs séparées par des espaces, utilisables directement en CSS.
+    @return $rem-values;
+}
+
+@function Clamp($min, $val, $max) {
+    @if ($val < $min) {
+        $val: $min;
+    }
+    @if ($val > $max) {
+        $val: $max;
+    }
+    @return $val;
+}
