@@ -18,15 +18,10 @@
 @use 'variables.scss' as *;
 
 /*-----------------------*/
+/* Propriétés globales */
 html {
 	scroll-behavior: smooth;
 }
-
-.image {
-	color: white;
-	font-family: 'sans-serif';
-}
-
 .body--index, .body--history {
 	//Créer les variables pour pouvoir y accéder et les modifier en JS
 	--bg-color-first-start: #{$colorpalette-background-gradient-first-start};
@@ -67,7 +62,6 @@ html {
 		&__nav {
 		}
 }
-
 .logo-sitename {
     display: flex;
     gap: px2rem(48);
@@ -137,9 +131,10 @@ html {
 		}
 }
 /*-----------------------*/
-/* Page index */
+/* --- Page index --- */
 .index-sec-title {
 		padding: 0 5rem;
+		padding-bottom: 4rem;
 
 		&__hello {
 			padding-top: clamp(4rem, 10vw, 8rem);
@@ -205,9 +200,10 @@ html {
 		padding-top: px2rem(48);
 	}*/
 }
-/* Page histoire */
+/* --- Page histoire --- */
 .history-sec-intro {
 		padding: 0 2rem;
+		padding-bottom: 62vh;
 
 		&__intro {
 			padding-top: clamp(4rem, 10vw, 8rem);
@@ -247,6 +243,57 @@ html {
 	gap: px2rem(16) px2rem(32);
 }
 
+.history-sec-history {
+	padding: px2rem(48) clamp(1.5rem, 5vw, 4rem);
+	padding-bottom: 50rem;
+	
+	display: flex;
+	flex-direction: column;
+	gap: 6rem;
+	
+}
+
+.section {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	//align-content: center;
+	flex-wrap: wrap;
+
+	font-family: 'Rubik';
+	
+	&--1 {
+		flex-direction: column;
+		
+		gap: px2rem(40);
+		color: black;
+	}
+}
+
+.section__title {
+	//,, 5rem
+	font-size: clamp(3.5rem, 10.625vw, 5rem);
+	font-weight: 400;
+	text-align: center;
+}
+.paragraph {
+	//1.125
+	font-size: (0.975rem, 2.625vw, 1.125rem);
+	font-weight: 300;
+	text-align: center;
+	line-height: px2rem(20);
+
+	&--large {
+		max-width: 80rem;
+	}
+	&--tiny-left {
+		max-width: 32rem;
+		text-align: left;
+	}
+
+	
+}
+
 
 .a-button {
 	display: flex;
@@ -278,4 +325,8 @@ html {
 		background-color: #F6F6F6;
 		border-color: #F6F6F6;
 	}
+}
+.image {
+	//color: white;
+	font-family: 'sans-serif';
 }
