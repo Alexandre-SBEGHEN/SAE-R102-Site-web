@@ -18,13 +18,3 @@
     // Retourne une liste de valeurs séparées par des espaces, utilisables directement en CSS.
     @return $rem-values;
 }
-
-@function Clamp($min, $val, $max) {
-    @if ($val < $min) {
-        $val: $min;
-    }
-    @if ($val > $max) {
-        $val: $max;
-    }
-    @return $val;
-}

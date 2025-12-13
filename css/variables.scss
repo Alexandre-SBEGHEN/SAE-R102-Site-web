@@ -59,11 +59,12 @@ $colorpalette-text-dark: black;
     Effets
 */
 /* Ombres de texte */
+$effect-text-shadow-vtiny: 4px 4px 12px rgba(0, 0, 0, 0.4);
 $effect-text-shadow-tiny: 4px 4px 8px rgba(0, 0, 0, 0.6);
 $effect-text-shadow-big: 12px 12px 16px rgba(0, 0, 0, 0.4);
 /* Ombres d'images */
 $effect-img-shadow-tiny: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.5));
-$effect-img-shadow-tiny: drop-shadow(12px 12px 12px rgba(0, 0, 0, 0.4));
+$effect-img-shadow-big: drop-shadow(12px 12px 12px rgba(0, 0, 0, 0.4));
 /* Ombres d'éléments */
 $effect-element-shadow: 10px 10px 12px rgba(0, 0, 0, 0.4);
 $effect-element-shadow-vertical: 0 10px 12px rgba(0, 0, 0, 0.4);

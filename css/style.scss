@@ -86,7 +86,7 @@ html {
 .logolink-logo {
 	height: px2rem(48);
 	filter: $effect-img-shadow-tiny;
-}
+}	
 
 .nav {
 		// .nav__list
@@ -182,6 +182,8 @@ html {
 		column-gap: px2rem(80);
 	}
 
+	
+
 	&__img {
 		width: clamp(12rem, 21.3vw, 16rem);
 		
@@ -245,24 +247,29 @@ html {
 
 .history-sec-history {
 	padding: px2rem(48) clamp(1.5rem, 5vw, 4rem);
-	padding-bottom: 50rem;
+	padding-bottom: 16rem;
 	
 	display: flex;
 	flex-direction: column;
-	gap: 6rem;
+	gap: 5rem;
 	
 }
 
 .section {
 	display: flex;
 	align-items: center;
-	justify-content: space-evenly;
+	justify-content: center;
+	gap: 2rem 6rem;
 	//align-content: center;
 	flex-wrap: wrap;
 
 	font-family: 'Rubik';
+
+	@media screen and (max-width:1024px) {
+		column-gap: 3rem;
+	}
 	
-	&--1 {
+	&--1, &--4 {
 		flex-direction: column;
 		
 		gap: px2rem(40);
@@ -273,8 +280,16 @@ html {
 .section__title {
 	//,, 5rem
 	font-size: clamp(3.5rem, 10.625vw, 5rem);
-	font-weight: 400;
+	font-weight: 500;
 	text-align: center;
+	text-shadow: $effect-text-shadow-vtiny;
+}
+.section__image {
+	border-radius: px2rem(32);
+	border: solid rgba(255, 177, 250, 0.35);
+	border-width: px2rem(8);
+
+	filter: $effect-img-shadow-tiny;
 }
 .paragraph {
 	//1.125
@@ -283,24 +298,75 @@ html {
 	text-align: center;
 	line-height: px2rem(20);
 
+	text-shadow: $effect-text-shadow-vtiny;
+
+	
+	&--tiny {
+		max-width: 32rem;
+		text-align: center;
+	}
+	&--medium {
+		max-width: 56rem;
+	}
 	&--large {
 		max-width: 80rem;
 	}
-	&--tiny-left {
-		max-width: 32rem;
-		text-align: left;
-	}
-
-	
 }
 
+.link-youtube {
+	position: relative;
+	display: inline-block;
 
+	filter: none;
+
+	
+
+	&:hover img, &:hover h3 {
+		filter: none;
+	}
+
+	& img {
+		display: block;
+		width: 100%;
+		height: auto;
+
+		filter: brightness(0.25) /*blur(4px)*/;
+
+		transition: filter 150ms ease-in-out;
+	}
+
+	& svg {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	& h3 {
+		text-align: center;
+		color: white;
+		text-decoration: none;
+		font-size: px2rem(24);
+		font-family: 'Rubik';
+		font-weight: 300;
+		width: 100%;
+
+		//filter: opacity(0);
+
+		position: absolute;
+		top: 8%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		transition: filter 150ms ease-in-out;
+	}
+} 
 .a-button {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 
-	width: px2rem(160);
+	//width: px2rem(160);
+	padding: 0 2rem;
 	height: px2rem(48);
 
 	background-color: white;
