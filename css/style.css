@@ -58,11 +58,11 @@ table {
 
 /*-----------------------------------*/
 /*
-	Fonctions diverses (ex: calcul de position)
+	Functions (ex: pos calc)
 */
 /*-----------------------------------*/
 /*
-    Variables (palette de couleurs, polices de texte, etc...)
+    Variables (color palette, fonts, etc...)
 */
 /*-----------------------------------*/
 /*
@@ -113,12 +113,12 @@ table {
 /* Ombres de texte */
 /* Ombres d'images */
 /*-----------------------*/
-/* Propriétés globales */
+/* --- Global properties --- */
 html {
   scroll-behavior: smooth;
 }
 
-.body--index, .body--history {
+.body {
   --bg-color-first-start: #5d06d6;
   --bg-color-first-end: #0B0215;
   --bg-color-last-start: #F0BFFF;
@@ -130,7 +130,7 @@ html {
   min-height: 100vh;
 }
 
-/* Menu de navigation */
+/* --- Nav menu --- */
 .header {
   display: flex;
   justify-content: space-between;
@@ -198,7 +198,7 @@ html {
   filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.5));
 }
 
-/* --- Page index --- */
+/* --- Index page --- */
 .homescreen {
   display: flex;
   flex-direction: column;
@@ -254,6 +254,7 @@ html {
   }
 }
 
+/* --- History page --- */
 .history-intro {
   display: flex;
   flex-direction: column;
@@ -286,28 +287,6 @@ html {
   flex-wrap: wrap;
   gap: 1rem 2rem;
   padding-bottom: 62vh;
-}
-
-.a-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 0 2rem;
-  height: 3rem;
-  background-color: white;
-  color: black;
-  text-decoration: none;
-  font-family: "Rubik";
-  font-weight: 300;
-  font-size: 1.125rem;
-  border: solid white 0.0625rem;
-  border-radius: 2rem;
-  box-shadow: 10px 10px 12px rgba(0, 0, 0, 0.4);
-}
-.a-button--transparent:not(:hover) {
-  background: none;
-  color: white;
 }
 
 .history-article__history-article-div {
@@ -370,6 +349,99 @@ html {
 }
 .history-article-paragraph--large {
   max-width: 80rem;
+}
+
+/* ---  Roster page --- */
+.roster-presentation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: clamp(4rem, 10vw, 8rem);
+  padding-bottom: 4rem;
+}
+.roster-presentation__title, .roster-presentation__subtitle {
+  text-align: center;
+  font-family: "Rubik";
+  color: white;
+  text-shadow: 12px 12px 16px rgba(0, 0, 0, 0.4);
+}
+.roster-presentation__title {
+  font-weight: 500;
+  font-size: clamp(4rem, 10vw, 8rem);
+  padding-bottom: 1rem;
+}
+.roster-presentation__subtitle {
+  font-size: clamp(1.5rem, 3.75vw, 3rem);
+  font-weight: 400;
+}
+
+.roster {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem 3rem;
+  padding: 0 10rem;
+  padding-bottom: 4rem;
+}
+
+.roster-card {
+  text-decoration: none;
+  transition: all 150ms ease-in-out;
+}
+.roster-card__div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.2rem;
+  width: 160px;
+  height: 13rem;
+  border-radius: 16px;
+  background-color: white;
+  box-shadow: 10px 10px 12px rgba(0, 0, 0, 0.4);
+  transition: background-color 100ms ease-in-out;
+}
+.roster-card__picture {
+  border-radius: 16px;
+  width: 100%;
+  height: auto;
+}
+.roster-card__name {
+  font-family: "Rubik";
+  font-weight: 400;
+  color: black;
+  max-width: 90%;
+  text-align: center;
+}
+.roster-card:hover {
+  transform: translate(0, -10%);
+}
+.roster-card:hover .roster-card__div {
+  background-color: #facd00;
+}
+
+/* --- Misc. --- */
+.a-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 2rem;
+  height: 3rem;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  font-family: "Rubik";
+  font-weight: 300;
+  font-size: 1.125rem;
+  border: solid white 0.0625rem;
+  border-radius: 2rem;
+  box-shadow: 10px 10px 12px rgba(0, 0, 0, 0.4);
+}
+.a-button--transparent:not(:hover) {
+  background: none;
+  color: white;
 }
 
 .youtube-embed {

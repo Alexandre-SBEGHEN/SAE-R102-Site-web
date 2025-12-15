@@ -11,6 +11,6 @@
     <body class="body">
         <h1>Ouupss</h1>
         <p>pas trouvé my bad</p>
-        <a href="index.php">Retour à l'accueil</a>
+        <a href="/">Retour à l'accueil</a>
     </body>
 </html>

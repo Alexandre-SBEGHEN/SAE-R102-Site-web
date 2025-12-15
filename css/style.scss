@@ -8,23 +8,22 @@
 @use 'reset.scss' as *;
 /*-----------------------------------*/
 /*
-	Fonctions diverses (ex: calcul de position)
+	Functions (ex: pos calc)
 */
 @use 'util.scss' as *;
 /*-----------------------------------*/
 /*
-    Variables (palette de couleurs, polices de texte, etc...)
+    Variables (color palette, fonts, etc...)
 */
 @use 'variables.scss' as *;
 
 /*-----------------------*/
-/* Propriétés globales */
+/* --- Global properties --- */
 html {
 	scroll-behavior: smooth;
 }
 .body {
-	&--index, &--history {
-		//Créer les variables pour pouvoir y accéder et les modifier en JS
+	//Créer les variables pour pouvoir y accéder et les modifier en JS
 	--bg-color-first-start: #{$colorpalette-background-gradient-first-start};
 	--bg-color-first-end: #{$colorpalette-background-gradient-first-end};
 	--bg-color-last-start: #{$colorpalette-background-gradient-last-start};
@@ -35,10 +34,9 @@ html {
 	background: linear-gradient($colorpalette-background-gradient-angle, var(--bg-color-current-start) 0%, var(--bg-color-current-end) 100%);
 	background-attachment: fixed;
 	min-height: 100vh;
-	}
 }
 
-/* Menu de navigation */
+/* --- Nav menu --- */
 .header {	
 	display: flex;
 	justify-content: space-between;
@@ -113,7 +111,7 @@ html {
 		}
 }
 
-/* --- Page index --- */
+/* --- Index page --- */
 .homescreen {
 	display: flex;
 	flex-direction: column;
@@ -177,7 +175,7 @@ html {
 	}
 }
 
-// /* --- Page histoire --- */
+/* --- History page --- */
 .history-intro {
 	display: flex;
 	flex-direction: column;
@@ -215,34 +213,7 @@ html {
 		padding-bottom: 62vh;
 	}
 }
-.a-button {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-wrap: wrap;
-	//width: px2rem(160);
-	padding: 0 2rem;
-	height: px2rem(48);
-	background-color: white;
-	color: black;
-	text-decoration: none;
-	font-family: 'Rubik';
-	font-weight: 300;
-	font-size: px2rem(18);
-	border: solid white px2rem(1);
-	border-radius: px2rem(32);
-	box-shadow: $effect-box-shadow;
-
-	&--transparent {
-		&:not(:hover) {
-			background: none;
-			color: white;
-		}
-	}
-}
-
 .history-article {
-	//padding: 0 10rem;
 
 	&__history-article-div {
 		padding-top: px2rem(48);
@@ -318,6 +289,115 @@ html {
 	}
 }
 
+/* ---  Roster page --- */
+.roster-presentation {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	padding-top: clamp(4rem, 10vw, 8rem);
+	padding-bottom: 4rem;
+
+	&__title, &__subtitle {
+		text-align: center;
+		font-family: 'Rubik';
+		color: white;
+
+		text-shadow: $effect-text-shadow-big;
+	}
+	&__title {
+		font-weight: 500;
+		font-size: clamp(4rem, 10vw, 8rem);
+		padding-bottom: px2rem(16);
+	}
+	&__subtitle {
+		font-size: clamp(1.5rem, 3.75vw, 3rem);
+		font-weight: 400;
+	}
+}
+
+.roster {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 2rem 3rem;
+
+	padding: 0 10rem;
+	padding-bottom: 4rem;
+}
+.roster-card {
+	text-decoration: none;
+
+	&__div {
+		display: flex;
+		flex-direction: column;
+		
+		align-items: center;
+
+		gap: 0.5rem;
+
+		padding: 0.2rem;
+		width: 160px;
+		height: 13rem;
+
+		border-radius: 16px;
+
+		background-color: white;
+
+		box-shadow: $effect-box-shadow;
+
+		transition: background-color 100ms ease-in-out;
+	}
+	&__picture {
+		border-radius: 16px;
+		width: 100%;
+		height: auto;
+	}
+	&__name {
+		font-family: 'Rubik';
+		font-weight: 400;
+		color: black;
+
+		max-width: 90%;
+		text-align: center;
+	}
+
+	transition: all 150ms ease-in-out;
+	&:hover {
+		transform: translate(0, -10%);
+	}
+	&:hover &__div {
+		background-color: #facd00;
+	}
+}
+
+/* --- Misc. --- */
+.a-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	//width: px2rem(160);
+	padding: 0 2rem;
+	height: px2rem(48);
+	background-color: white;
+	color: black;
+	text-decoration: none;
+	font-family: 'Rubik';
+	font-weight: 300;
+	font-size: px2rem(18);
+	border: solid white px2rem(1);
+	border-radius: px2rem(32);
+	box-shadow: $effect-box-shadow;
+
+	&--transparent {
+		&:not(:hover) {
+			background: none;
+			color: white;
+		}
+	}
+}
 .youtube-embed {
 	position: relative;
 	display: inline-block;
@@ -364,7 +444,6 @@ html {
 		transition: filter 150ms ease-in-out;
 	}
 }
-
 .image {
 	//color: white;
 	font-family: 'sans-serif';

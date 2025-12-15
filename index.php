@@ -9,26 +9,26 @@
         <link rel="stylesheet" href="css/style.css">
         <title><?php $docname=get_page_name(); echo $translations->$lang_current->docname->$docname; ?></title>
     </head>
-    <body class="body--index">
-        <!-- Menu de navigation -->
+    <body class="body">
+        <!-- Nav menu -->
         <?php require('navbar.php'); ?>
 
-        <!-- Contenu de la page -->
-        <main class="home-main">
+        <!-- Page main content -->
+        <main class="main">
 
-            <!-- Section titre -->
-            <div class="home-main__index-sec-title index-sec-title">
-                <!-- Écran titre -->
-                <div class="index-sec-title__hello hello">
-                    <h2 class="hello__title"><?php echo $translations->$lang_current->pages->index->title; ?></h2>
-                    <h3 class="hello__subtitle"><?php echo $translations->$lang_current->pages->index->subtitle; ?></h3>
+            <!-- Homescreen -->
+            <div class="main__homescreen homescreen">
+                <!-- Welcome text -->
+                <div class="homescreen__homescreen-div homescreen-div--welcome">
+                    <h2 class="homescreen__title"><?php echo $translations->$lang_current->pages->index->title; ?></h2>
+                    <h3 class="homescreen__subtitle"><?php echo $translations->$lang_current->pages->index->subtitle; ?></h3>
                 </div>
 
-                <!-- Les 3 images -->
-                <div class="index-sec-title__intro-pictures intro-pictures">
-                    <img class="intro-pictures__img" src="assets/images/roster/preview/chimpanzini_bananini.avif" alt="Chimpanzini Bananini">
-                    <img class="intro-pictures__img" src="assets/images/roster/preview/brr_patapim.avif" alt="Brr Brr Patapim">
-                    <img class="intro-pictures__img" src="assets/images/roster/preview/tung_sahur.avif" alt="Tung Tung Tung Sahur">
+                <!-- The 3 images -->
+                <div class="homescreen__homescreen-div homescreen-div--pictures">
+                    <img width="256" class="homescreen__picture" src="assets/images/roster/preview/chimpanzini.avif" alt="Chimpanzini Bananini">
+                    <img width="256" class="homescreen__picture" src="assets/images/roster/preview/brr_patapim.avif" alt="Brr Brr Patapim">
+                    <img width="256" class="homescreen__picture" src="assets/images/roster/preview/tung_sahur.avif" alt="Tung Tung Tung Sahur">
                 </div>
             </div>
 

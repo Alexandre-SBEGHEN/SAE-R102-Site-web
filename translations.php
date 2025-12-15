@@ -32,6 +32,14 @@ $translations_string = '{
                 "browse": "Browse",
 
                 "back_to_top": "Back to top"
+            },
+            "roster": {
+                "meta_desc": "A wide selection of the best and most known Brainrots, each followed by a presentation.",
+
+                "title": "ENJOY",
+                "subtitle": "our catalog.",
+
+                "card_alt": "Character "
             }
         }
     }

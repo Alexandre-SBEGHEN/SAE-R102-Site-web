@@ -33,3 +33,78 @@ function get_page_name() {
 function page_nameis($name) {
     return get_page_name() == $name;
 }
+
+//Initialiser les cartes de brainrots
+if (page_nameis('roster')) {
+    $cards_string = '[
+        {
+            "name": "ballerina",
+            "label": "Ballerina Cappucina"
+        },
+        {
+            "name": "bombombini",
+            "label": "Bombombini Gusini"
+        },
+        {
+            "name": "brr_patapim",
+            "label": "Brr Brr Patapim"
+        },
+        {
+            "name": "burbaloni",
+            "label": "Burbaloni Luliloli"
+        },
+        {
+            "name": "cappuccino",
+            "label": "Cappuccino Assassino"
+        },
+        {
+            "name": "chimpanzini",
+            "label": "Chimpanzini Bananini"
+        },
+        {
+            "name": "cocofanto",
+            "label": "Cocofanto Elefanto"
+        },
+        {
+            "name": "frulli",
+            "label": "Frulli Frulla"
+        },
+        {
+            "name": "job_sahur",
+            "label": "Job Job Job Sahur"
+        },
+        {
+            "name": "la_vacca",
+            "label": "La Vacca Saturno Saturnita"
+        },
+        {
+            "name": "lirili",
+            "label": "Lirili Larila"
+        },
+        {
+            "name": "orcalero",
+            "label": "Orcalero Orcala"
+        },
+        {
+            "name": "ta_sahur",
+            "label": "Ta Ta Ta Sahur"
+        },
+        {
+            "name": "trippi",
+            "label": "Trippi Troppi"
+        },
+        {
+            "name": "trulimero",
+            "label": "Trulimero Trulichina"
+        },
+        {
+            "name": "tung_sahur",
+            "label": "Tung Tung Tung Sahur"
+        },
+        {
+            "name": "u_din",
+            "label": "U Din Din Din Din Dun"
+        }
+    ]';
+    $cards = json_decode($cards_string);
+}
