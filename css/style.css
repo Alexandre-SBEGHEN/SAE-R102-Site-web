@@ -76,6 +76,14 @@ table {
   font-weight: 300;
   src: url("../assets/fonts/rubik/rubik-v31-latin-300.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+/* rubik-300italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Rubik";
+  font-style: italic;
+  font-weight: 300;
+  src: url("../assets/fonts/rubik/rubik-v31-latin-300italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 /* rubik-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
@@ -417,6 +425,7 @@ html {
   text-shadow: 12px 12px 16px rgba(0, 0, 0, 0.4);
 }
 .roster-presentation__title {
+  max-width: 80rem;
   font-weight: 500;
   font-size: clamp(4rem, 10vw, 8rem);
   padding-bottom: 1rem;
@@ -435,6 +444,24 @@ html {
   padding-bottom: 4rem;
 }
 
+.roster-card-title {
+  padding-top: clamp(4rem, 10vw, 8rem);
+  padding-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.roster-card-title__title {
+  text-align: center;
+  font-family: "Rubik";
+  font-weight: 500;
+  font-size: clamp(3rem, 10vw, 5.5rem);
+  max-width: 90%;
+  color: white;
+  text-shadow: 12px 12px 16px rgba(0, 0, 0, 0.4);
+}
+
 .roster-card {
   text-decoration: none;
   transition: all 150ms ease-in-out;
@@ -447,7 +474,7 @@ html {
   padding: 0.2rem;
   width: 160px;
   height: 13rem;
-  border-radius: 16px;
+  border-radius: 18px;
   background-color: white;
   box-shadow: 10px 10px 12px rgba(0, 0, 0, 0.4);
   transition: background-color 100ms ease-in-out;
@@ -471,6 +498,64 @@ html {
   background-color: #facd00;
 }
 
+.roster-identity {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  padding-bottom: 4rem;
+}
+.roster-identity__quote-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  width: clamp(20rem, 45vw, 32rem);
+  background-color: white;
+  border-radius: 24px;
+  box-shadow: 10px 10px 12px rgba(0, 0, 0, 0.4);
+}
+.roster-identity__h, .roster-identity__p, .roster-identity__quote {
+  font-family: "Rubik";
+  font-size: 16;
+  text-align: center;
+}
+.roster-identity__h {
+  font-size: 18px;
+  font-weight: 400;
+}
+.roster-identity__p, .roster-identity__quote {
+  font-weight: 300;
+  line-height: 1.25rem;
+  max-width: clamp(17rem, 34vw, 26rem);
+}
+.roster-identity__quote {
+  font-style: italic;
+}
+.roster-identity__picture {
+  border-radius: 2rem;
+  border: solid rgba(255, 177, 250, 0.35);
+  border-width: 0.5rem;
+  filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.5));
+  width: clamp(12rem, 21.3vw, 16rem);
+  height: auto;
+}
+@media screen and (max-width: 1024px) {
+  .roster-identity {
+    flex-direction: column;
+  }
+}
+
+.other-brainrots-div {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 4rem;
+}
+
 /* --- Misc. --- */
 .a-button {
   display: flex;
@@ -488,6 +573,13 @@ html {
   border: solid white 0.0625rem;
   border-radius: 2rem;
   box-shadow: 10px 10px 12px rgba(0, 0, 0, 0.4);
+  /*
+  &--colored {
+  	background: linear-gradient($colorpalette-navbar-gradient-angle, $colorpalette-navbar-gradient-start 0%, $colorpalette-navbar-gradient-end 100%);
+  	border-color: rgb(182, 56, 255);
+  	color: white;
+  }
+  */
 }
 .a-button--transparent:not(:hover) {
   background: none;

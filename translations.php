@@ -50,6 +50,32 @@ $translations_string = '{
                 "subtitle": "our catalog.",
 
                 "card_alt": "Character "
+            },
+            "roster_card": {
+                "quote_original": "Original version:",
+                "quote_translated": "Translated version:",
+
+                "quotes": {
+                    "ballerina": "Ballerina Cappuccina, mi mi mi mi! She is the wife of Cappuccino Assassino. And she loves music, la la la la! Her passion is Ballerino Lololo.",
+                    "bombombini": "Bombombini Gusini! Brother Bombardiro Crocodile, who performs all the same functions as his brother and gives bombs to people. A joke for those who have moved: a Georgian walks by carrying two watermelons under his arms, then a man asks him, “What time is it?” “Listen, hold the watermelon.” (...)",
+                    "brr_patapim": "Brr, brr, Patapim, my hat is full of Slim! In the dense and mysterious forest lived a very curious creature. With intertwined roots and crossed legs, thin hands, and waving arms. Its nose was as long as a ham, a bit like a baboon\'s, a bit like a bush. (...)",
+                    "burbaloni": "Burbaloni Luliloli, Capibarello Coccosini! It is very rare to find a unique coconut on the coast of Bali that contains a capybara inside. This is a very rare event in which locals gather around a fire and celebrate the arrival of the coconut capybara god. (...)",
+                    "cappuccino": "Cappu-cappu-cappuccino Killer! Cappuccino killers! This stealthy killer infiltrates enemies under the cover of night. Watch out, coffee haters! If you don\'t drink a cup of cappuccino in the morning, you\'d better not cross paths with this guy.",
+                    "chimpanzini": "Chimpanzini Bananini! Waa, waa, waa. Bananucci, monkey-monkey-monkeyucci! Or...",
+                    "cocofanto": "Cocofanto Elefanto Elefantucci Coconucci! This child is protected by a coconut. Together, they are afraid of no adversity. They travel through the jungle in search of adventure.",
+                    "frulli": "Frullì Frullà, a penguin in the desert who goes “blá blá blá.” With antennas on his back, he watches TV. And the coffee cup beckons him, saying, “Come here, my dear friend, have a drink with me.” But the penguin smiles; it\'s too hot for coffee. He continues to dance with elegant style in the surreal, delirious scene of the desert.",
+                    "job_sahur": "Job, Job, Job, Job, Job, Job, Job, Job, Job, Job, Sahur! Job application for you!",
+                    "la_vacca": "The Cow Saturn Saturnita. You are so beautiful, with the body of Saturn, Saturnita. The rings that spin, shine in the sky, a space cow without any veil. (...)",
+                    "lirili": "Lirilì Larilà, an elephant in the desert walking here and there. With his shell and a ticking clock, the cactus spines give me a flashback. Uncle Ramon arrives in a blue hot air balloon, shouting, \"What are you doing there? Do you like WiFi too?\" I reply breathlessly, \"I\'m just trying to understand why a cactus wearing sandals can also get dressed!\"",
+                    "orcalero": "Tralalero Tralala? No, no, no, Orcalero Orcala. White shoe. Splash, Boom, Ah. 1, 2, 3 shoes, yes yes yes. Orcalero Orcala. Hard head, stomp like a pope.",
+                    "ta_sahur": "Ta Ta Ta Ta Ta Ta! Sahur!!!! There is a mysterious event that only occurs during sahur. It is said that if someone is called Sahur three times but does not respond, this creature will come to their house. Eee, that\'s really scary. (...)",
+                    "trippi": "Trippi Too much, too much tripe, three mice scurry among chopped trombones, tripling tropical spinning tops. And those who want too much get nothing!",
+                    "trulimero": "Trulimero Trulichina, pretiletine in the pool, cheese on the trulalima, but who calls the cup?",
+                    "tung_sahur": "Tung, tung, tung, tung, tung, tung, tung, tung, tung Sahur. A terrifying anomaly that only appears at dawn. It is said that if someone is called three times at dawn and does not respond, then this creature will come to your house. Hiiii, how scary! (...)",
+                    "u_din": "Udin Din Din Din Dun Ma Din Din Din Dun is an orange with eyes and a mouth. He used to be an ordinary human being, but because he often swallowed orange seeds, he turned into Udin Din Din Dun the orange."
+                },
+                
+                "other_brainrots": "Other Brainrots"
             }
         }
     }

@@ -205,6 +205,7 @@ html {
 		height: auto;
 	}
 }
+
 .homescreen-div {
 	display: flex;
 	flex-direction: column;
@@ -365,6 +366,8 @@ html {
 		text-shadow: $effect-text-shadow-big;
 	}
 	&__title {
+		max-width: 80rem;
+
 		font-weight: 500;
 		font-size: clamp(4rem, 10vw, 8rem);
 		padding-bottom: px2rem(16);
@@ -374,7 +377,6 @@ html {
 		font-weight: 400;
 	}
 }
-
 .roster {
 	display: flex;
 	justify-content: center;
@@ -383,6 +385,31 @@ html {
 
 	padding: 0 10rem;
 	padding-bottom: 4rem;
+}
+.roster-card-title {
+	padding-top: clamp(4rem, 10vw, 8rem);
+	padding-bottom: 4rem;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	&__title {
+		text-align: center;
+		font-family: 'Rubik';
+		font-weight: 500;
+		font-size: clamp(3rem, 10vw, 5.5rem);
+		//font-size: 3rem;
+		max-width: 90%;
+
+		// padding-bottom: px2rem(16);
+
+		color: white;
+
+
+		text-shadow: $effect-text-shadow-big;
+	}
 }
 .roster-card {
 	text-decoration: none;
@@ -399,7 +426,7 @@ html {
 		width: 160px;
 		height: 13rem;
 
-		border-radius: 16px;
+		border-radius: 18px;
 
 		background-color: white;
 
@@ -429,6 +456,79 @@ html {
 		background-color: #facd00;
 	}
 }
+.roster-identity {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+
+	gap: 3rem;
+
+	padding-bottom: 4rem;
+
+	&__quote-div {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		gap: 1rem;
+
+		padding: 1rem 0;
+
+		//width: 32rem;
+		width: clamp(20rem, 45vw, 32rem);
+		
+		
+		//padding: 2rem 0rem;
+		background-color: white;
+
+		border-radius: 24px;
+
+		box-shadow: $effect-box-shadow;
+		
+	}
+
+	&__h, &__p, &__quote {
+		font-family: 'Rubik';
+		font-size: 16;
+
+		text-align: center;
+	}
+	&__h {
+		font-size: 18px;
+		font-weight: 400;
+	}
+	&__p, &__quote {
+		font-weight: 300;
+		line-height: 1.25rem;
+		max-width: clamp(17rem, 34vw, 26rem);
+	}
+	&__quote {
+		font-style: italic;
+	}
+
+	&__picture {
+		border-radius: px2rem(32);
+		border: solid rgba(255, 177, 250, 0.35);
+		border-width: px2rem(8);
+
+		filter: $effect-filter-img-drop-shadow-tiny;
+
+		width: clamp(12rem, 21.3vw, 16rem);
+		height: auto;
+	}
+
+	@media screen and (max-width: 1024px) {
+		flex-direction: column;
+	}
+}
+.other-brainrots-div {
+	display: flex;
+	justify-content: center;
+
+	padding-bottom: 4rem;
+}
 
 /* --- Misc. --- */
 .a-button {
@@ -455,6 +555,13 @@ html {
 			color: white;
 		}
 	}
+	/*
+	&--colored {
+		background: linear-gradient($colorpalette-navbar-gradient-angle, $colorpalette-navbar-gradient-start 0%, $colorpalette-navbar-gradient-end 100%);
+		border-color: rgb(182, 56, 255);
+		color: white;
+	}
+	*/
 }
 .youtube-embed {
 	position: relative;

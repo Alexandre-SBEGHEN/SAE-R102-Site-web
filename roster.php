@@ -23,22 +23,24 @@
 
             <!-- The roster -->
             <div class="main__roster roster">
-            <?php
-            echo "\t";
-            for ($i = 0; $i < count($cards); $i++) {
-                $name = $cards[$i]->name;
-                $label = $cards[$i]->label;
-
-                echo '<a class="roster__roster-card roster-card" href="roster/', $name, '.php">', "\n\t\t\t\t\t";
-                echo '<div class="roster-card__div">', "\n\t\t\t\t\t\t";
+                <?php
                 
-                echo '<img class="roster-card__picture" src="assets/images/roster/preview/', $name, '.avif" alt="', $translations->$lang_current->pages->roster->card_alt, $label,'" loading="lazy">', "\n\t\t\t\t\t\t";
-                echo '<p class="roster-card__name">', $label, '</p>', "\n\t\t\t\t\t";
+                echo "\t";
+                for ($i = 0; $i < count($cards_keys); $i++) {
+                    $name = $cards_keys[$i];
+                    $label = $cards->$name->name;
 
-                echo '</div>', "\n\t\t\t\t";            
-                echo '</a>', ($i < count($cards)-1) ? "\n\t\t\t\t" : "\n";
-            }
-            ?>
+                    echo '<a class="roster__roster-card roster-card" href="roster_card.php?brname=', $name,'">', "\n\t\t\t\t\t";
+                    echo '<div class="roster-card__div">', "\n\t\t\t\t\t\t";
+                    
+                    echo '<img class="roster-card__picture" src="assets/images/roster/preview/', $name, '.avif" alt="', $translations->$lang_current->pages->roster->card_alt, $label,'" loading="lazy">', "\n\t\t\t\t\t\t";
+                    echo '<p class="roster-card__name">', $label, '</p>', "\n\t\t\t\t\t";
+
+                    echo '</div>', "\n\t\t\t\t";            
+                    echo '</a>', ($i < count($cards_keys)-1) ? "\n\t\t\t\t" : "\n";
+                }
+                
+                ?>
             </div>
         </main>
     </body>
