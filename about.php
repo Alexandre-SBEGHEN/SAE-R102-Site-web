@@ -29,27 +29,44 @@
                 <div class="about__about-div-infos about-div-infos">
                     <!-- Presentation -->
                     <div class="about-div-infos__about-infobubble about-infobubble">
+                        <!-- Short introduction -->
                         <p class="about-infobubble__text">Nous sommes MALLET Mathias, SBEGHEN Alexandre, et YOUNOUSSA Hachim. Nous sommes passionnés d'informatique et nous aimons beaucoup les memes. Les Brainrots en sont justement, et nous avons décidé sans réellement réfléchir de créer notre tout premier site web en les choisissant comme thématique.</p>
                         
+                        <!-- We're students... -->
                         <p class="about-infobubble__text">Nous sommes étudiants à <a class="about-infobubble-a" href="https://www.univ-amu.fr/">Aix-Marseille Université</a>, en première année de BUT informatique.</p>
 
+                        <!-- Why we made it -->
                         <p class="about-infobubble__text">Nous avons réalisé ce site web dans le cadre d'un projet de groupe qui nous a été donné par notre professeur <a class="about-infobubble-a" href="https://www.mickael-martin-nevot.com/">Mickael MARTIN NEVOT</a>.</p>
 
+                        <!-- Theme change -->
                         <p class="about-infobubble__text">D'ailleurs, nous avons en début d'année appris à nous servir de Linux, et nous aimons tellement l'apparence des terminaux de commande que nous sommes dits que, cela pourrait être drôle si le site pouvait <a class="about-infobubble-a" href="?theme=<?php
                             echo ($site_theme == 'normal' ? 'shell' : 'normal');
                         ?>">ressembler à un terminal</a>...</p>
                     </div>
 
-                    <!-- Why we made this website -->
-                    <div class="about-div-infos__about-infobubble about-infobubble">
-                        <p>Bulle 2.1</p>
-                        <p>Bulle 2.2</p>
-                        <p>Bulle 2.3</p>
-                    </div>
-
                     <!-- Website opinion -->
                     <div class="about-div-infos__about-infobubble about-infobubble">
-                        <p>Bulle 3.1</p>
+                        <!-- Your opinion matter -->
+                        <p class="about-infobubble__text">Puisqu'il s'agit de notre tout premier site web, nous aimerions beaucoup savoir ce que vous pensez de ce dernier. C'est pourquoi nous vous proposons de remplir le formulaire ci-dessous afin que vous puissiez laisser un petit commentaire à propos votre visite sur Brainrot City. Votre avis compte !</p>
+                    
+                        <!-- The form -->
+                        <div>
+                            <form action="https://formspree.io/f/mlgredyp" method="POST">
+                                <label for="nom">Nom :</label>
+                                <input type="text" id="nom" name="nom" required>
+
+                                <label for="prenom">Prénom :</label>
+                                <input type="text" id="prenom" name="prenom" required>
+
+                                <label for="email">E-mail :</label>
+                                <input type="email" id="email" name="email" required>
+
+                                <label for="avis">Avis :</label>
+                                <textarea id="avis" name="avis" required></textarea>
+
+                                <button type="submit">Envoyer</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
