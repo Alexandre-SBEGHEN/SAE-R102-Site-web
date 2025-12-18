@@ -146,6 +146,18 @@ html {
   min-height: 100vh;
 }
 
+.footer {
+  position: absolute;
+  right: 2rem;
+  bottom: 1rem;
+}
+.footer__legal-notices {
+  font-family: "Rubik";
+  font-weight: 300;
+  font-size: 16px;
+  color: white;
+}
+
 /* --- Error 404 --- */
 .e404 {
   display: flex;
