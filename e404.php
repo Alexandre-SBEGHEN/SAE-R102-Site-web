@@ -7,7 +7,9 @@
         <meta name="description" content="<?php $docname=get_page_name(); echo $translations->$lang_current->pages->e404->meta_desc; ?>">
         <!--<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">-->
         <link rel="icon" href="/favicon.png" type="image/png">
-        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="css/<?php
+            echo ($site_theme == 'normal') ? 'style' : 'style-alt';
+        ?>.css">
         <title><?php $docname=get_page_name(); echo $translations->$lang_current->docname->$docname; ?></title>
     </head>
     <body class="body">
