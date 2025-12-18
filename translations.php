@@ -92,7 +92,18 @@ $translations_string = '{
             "about": {
                 "about_us": "Who are we?",
 
+                "text_1": "We are MALLET Mathias, SBEGHEN Alexandre, and YOUNOUSSA Hachim. We are passionate about computers and we really like memes. Brainrots are exactly that, and we decided without really thinking about it to create our very first website with them as the theme.",
+                "text_2": "We are students at <a class=\"about-infobubble__a\" href=\"https://www.univ-amu.fr/\">Aix-Marseille University</a>, in our first year of a Bachelor\'s degree in Computer Science.",
+                "text_3": "We created this website as part of a group project assigned to us by our teacher <a class=\"about-infobubble__a\" href=\"https://www.mickael-martin-nevot.com/\">Mickael MARTIN NEVOT</a>.",
+                "text_4": "In fact, at the beginning of the year, we learned how to use Linux, and we like the look of command terminals so much that we thought it would be fun if the site could",
+                "text_5": "look like a terminal",
+                "text_6": "Since this is our very first website, we would love to hear what you think about it. That\'s why we invite you to fill out the form below so you can leave a short comment about your visit to Brainrot City. Your opinion matters!",
 
+                "form_lastname": "Last name:",
+                "form_firstname": "First name:",
+                "form_email": "E-mail:",
+                "form_opinion": "Opinion:",
+                "form_submit": "Submit",
 
                 "legal_notices": "Legal notices"
             }

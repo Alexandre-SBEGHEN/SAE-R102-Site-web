@@ -612,7 +612,7 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 1rem;
   border-radius: 24px;
   background-color: white;
   box-shadow: 10px 10px 12px rgba(0, 0, 0, 0.4);
@@ -631,6 +631,13 @@ html {
   align-items: center;
   gap: 1rem;
   font-weight: 400;
+}
+.about-form__input {
+  width: 80%;
+}
+.about-form__textarea {
+  width: 90%;
+  height: 4rem;
 }
 
 .about-form, .about-form__button, .about-form__input, .about-form__textarea {
@@ -729,19 +736,4 @@ html {
 
 .image {
   font-family: "sans-serif";
-}
-
-.form {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 2rem 5rem;
-  border-radius: 32px;
-  background-color: red;
-  box-shadow: 10px 10px 12px rgba(0, 0, 0, 0.4);
-  font-family: "Rubik";
-  font-weight: 400;
-  font-size: 18px;
 }/*# sourceMappingURL=style.css.map */

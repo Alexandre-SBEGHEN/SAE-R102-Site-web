@@ -586,7 +586,7 @@ html {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	gap: 2rem;
+	gap: 1rem;
 
 	border-radius: 24px;
 	background-color: white;
@@ -610,6 +610,14 @@ html {
 	gap: 1rem;
 	
 	font-weight: 400;
+
+	&__input {
+		width: 80%;
+	}
+	&__textarea {
+		width: 90%;
+		height: 4rem;
+	}
 }
 .about-form, .about-form__button, .about-form__input, .about-form__textarea {
 	font-family: 'Rubik';
@@ -631,7 +639,6 @@ html {
 		cursor: pointer;
 		background-color: rgb(176, 85, 255);
 	}
-	
 }
 .about-form__input, .about-form__textarea {
 	font-weight: 300;
