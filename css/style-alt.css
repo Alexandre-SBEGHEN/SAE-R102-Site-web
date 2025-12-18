@@ -130,10 +130,6 @@ table {
 /* Ombres d'images */
 /*-----------------------*/
 /* --- Global properties --- */
-html {
-  scroll-behavior: smooth;
-}
-
 .body {
   --bg-color-first-start: #5d06d6;
   --bg-color-first-end: #0B0215;
@@ -170,7 +166,6 @@ html {
 }
 .e404__picture {
   border-radius: 2rem;
-  border: solid rgba(255, 177, 250, 0.35);
   border-width: 0.5rem;
   filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.5));
   width: clamp(12rem, 21.3vw, 16rem);
@@ -401,7 +396,7 @@ html {
   flex-direction: column;
 }
 .history-article__title {
-  font-family: "Rubik";
+  font-family: "Terminus";
   text-align: center;
   color: white;
   text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
@@ -468,7 +463,6 @@ html {
   text-align: center;
   font-family: "Terminus";
   color: white;
-  text-shadow: 12px 12px 16px rgba(0, 0, 0, 0.4);
 }
 .roster-presentation__title {
   font-weight: 500;
@@ -498,31 +492,174 @@ html {
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.2rem;
   width: 160px;
   height: 13rem;
-  border-radius: 16px;
   background-color: white;
-  box-shadow: 10px 10px 12px rgba(0, 0, 0, 0.4);
-  transition: background-color 100ms ease-in-out;
 }
 .roster-card__picture {
-  border-radius: 16px;
   width: 100%;
   height: auto;
+  filter: grayscale(100%) brightness(0.9) contrast(1000%);
+  image-rendering: pixelated;
+  border-bottom: 4px solid rgb(0, 255, 0);
+  box-sizing: border-box;
+  outline: 4px solid #00ff00;
+  outline-offset: -4px;
 }
 .roster-card__name {
-  font-family: "Rubik";
+  font-family: "Terminus";
   font-weight: 400;
   color: black;
   max-width: 90%;
   text-align: center;
 }
-.roster-card:hover {
-  transform: translate(0, -10%);
-}
 .roster-card:hover .roster-card__div {
-  background-color: #facd00;
+  background-color: #1900ff;
+}
+
+.roster-identity {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 4rem;
+  padding-bottom: 2rem;
+}
+.roster-identity__quote-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 0;
+  width: clamp(20rem, 45vw, 42rem);
+  background-color: white;
+}
+.roster-identity__quote-div:hover {
+  background-color: #1900ff;
+  color: #ffffff;
+}
+.roster-identity__h, .roster-identity__p, .roster-identity__quote {
+  font-family: "Terminus";
+  font-size: 16px;
+  text-align: left;
+  text-align: center;
+}
+.roster-identity__h {
+  font-size: 18px;
+  font-weight: 400;
+}
+.roster-identity__p, .roster-identity__quote {
+  font-weight: 300;
+  line-height: 1.25rem;
+  max-width: clamp(17rem, 34vw, 36rem);
+}
+.roster-identity__quote {
+  font-style: italic;
+}
+.roster-identity__picture {
+  filter: grayscale(100%) brightness(0.9) contrast(1000%);
+  image-rendering: pixelated;
+  width: clamp(12rem, 21.3vw, 16rem);
+  height: auto;
+}
+@media screen and (max-width: 1024px) {
+  .roster-identity {
+    flex-direction: column;
+  }
+}
+
+.other-brainrots-div {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding-bottom: 4rem;
+}
+
+/* --- About page --- */
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 4rem;
+}
+.about__about-div-title {
+  padding-top: clamp(4rem, 10vw, 5rem);
+  text-align: center;
+  font-family: "Terminus";
+  color: white;
+  font-weight: 500;
+  font-size: clamp(3rem, 10vw, 6rem);
+  padding-bottom: 1rem;
+}
+.about__about-div-infos {
+  padding-top: 4rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+
+.about-infobubble {
+  padding: 2rem 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2rem;
+  background-color: #1900ff;
+  color: white;
+}
+.about-infobubble:hover {
+  background-color: black;
+  color: #ffffff;
+}
+.about-infobubble__text {
+  font-family: "Terminus";
+  font-weight: 300;
+  line-height: 1.25rem;
+  text-align: left;
+  max-width: 24rem;
+}
+
+.about-infobubble__a {
+  color: #00a800;
+}
+
+.about-form {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 1rem;
+  font-weight: 400;
+}
+
+.about-form, .about-form__button, .about-form__input, .about-form__textarea {
+  font-family: "Terminus";
+}
+
+.about-form__button {
+  font-family: "terminus";
+  border: none;
+  background: none;
+  padding: 0.5rem 2rem;
+  color: black;
+  background-color: #00ff00;
+}
+.about-form__button:hover {
+  cursor: pointer;
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+.about-form__input, .about-form__textarea {
+  font-weight: 300;
+  background: #000000;
+  color: white;
+  padding: 0.5rem;
+  width: 100%;
+  max-width: 20rem;
 }
 
 /* --- Misc. --- */
@@ -571,17 +708,13 @@ html {
   position: relative;
   display: inline-block;
   width: clamp(240px, 50vw, 640px);
-  filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.5));
-}
-.youtube-embed:hover img, .youtube-embed:hover h3 {
-  filter: none;
 }
 .youtube-embed img {
   display: block;
   width: 100%;
   height: auto;
-  filter: brightness(0.25);
-  transition: filter 150ms ease-in-out;
+  filter: grayscale(100%) brightness(0.9) contrast(1000%);
+  image-rendering: pixelated;
 }
 .youtube-embed svg {
   position: absolute;
@@ -589,13 +722,15 @@ html {
   left: 50%;
   transform: translate(-50%, -50%);
   width: clamp(4rem, 17.9vw, 6.25rem);
+  filter: grayscale(100%) brightness(0.9) contrast(1000%);
+  image-rendering: pixelated;
 }
 .youtube-embed h3 {
   text-align: center;
   color: white;
   text-decoration: none;
   font-size: clamp(0.6rem, 2.5vw, 1.5rem);
-  font-family: "Rubik";
+  font-family: "Terminus";
   font-weight: 300;
   width: 100%;
   position: absolute;

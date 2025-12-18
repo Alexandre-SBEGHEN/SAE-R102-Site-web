@@ -19,9 +19,7 @@
 
 /*-----------------------*/
 /* --- Global properties --- */
-html {
-	scroll-behavior: smooth;
-}
+
 .body {
 	//Créer les variables pour pouvoir y accéder et les modifier en JS
 	--bg-color-first-start: #{$colorpalette-background-gradient-first-start};
@@ -63,7 +61,6 @@ html {
 	}
 	&__picture {
 		border-radius: px2rem(32);
-		border: solid rgba(255, 177, 250, 0.35);
 		border-width: px2rem(8);
 
 		filter: $effect-filter-img-drop-shadow-tiny;
@@ -356,7 +353,7 @@ html {
 	}
 	
 	&__title {
-		font-family: 'Rubik';
+		font-family: 'Terminus';
 		text-align: center;
 
 		color: white;
@@ -369,9 +366,7 @@ html {
 	&__picture {
 		width: clamp(12rem, 21.3vw, 16rem);
 		height: auto;
-		
 		filter: grayscale(100%) brightness(0.9) contrast(1000%);
-        
         image-rendering: pixelated;
 
 		
@@ -437,7 +432,6 @@ html {
 		font-family: 'Terminus';
 		color: white;
 
-		text-shadow: $effect-text-shadow-big;
 	}
 	&__title {
 		font-weight: 500;
@@ -470,25 +464,27 @@ html {
 
 		gap: 0.5rem;
 
-		padding: 0.2rem;
 		width: 160px;
 		height: 13rem;
 
-		border-radius: 16px;
+
 
 		background-color: white;
 
-		box-shadow: $effect-box-shadow;
-
-		transition: background-color 100ms ease-in-out;
 	}
 	&__picture {
-		border-radius: 16px;
 		width: 100%;
 		height: auto;
+		filter: grayscale(100%) brightness(0.9) contrast(1000%);
+        
+        image-rendering: pixelated;
+		border-bottom: 4px solid rgb(0, 255, 0);
+		box-sizing: border-box;
+		outline: 4px solid #00ff00;
+    	outline-offset: -4px;
 	}
 	&__name {
-		font-family: 'Rubik';
+		font-family: 'Terminus';
 		font-weight: 400;
 		color: black;
 
@@ -497,12 +493,189 @@ html {
 	}
 
 	transition: all 150ms ease-in-out;
-	&:hover {
-		transform: translate(0, -10%);
-	}
+
 	&:hover &__div {
-		background-color: #facd00;
+		background-color: #1900ff;
 	}
+}
+
+.roster-identity {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-wrap: wrap;
+
+	gap: 4rem;
+
+	padding-bottom: 2rem;
+
+	&__quote-div {
+		display: flex;
+		flex-direction: column;
+
+		justify-content: flex-start;
+        align-items: flex-start;
+
+		gap: 1rem;
+
+		padding: 1rem 0;
+
+		//width: 32rem;
+		width: clamp(20rem, 45vw, 42rem);
+		
+		
+		//padding: 2rem 0rem;
+		background-color: white;
+
+		&:hover {
+			background-color: #1900ff;
+			color: #ffffff;
+		}
+
+
+		
+	}
+
+	&__h, &__p, &__quote {
+		font-family: 'Terminus';
+		font-size: 16px;
+		text-align: left;
+		text-align: center;
+	}
+	&__h {
+		font-size: 18px;
+		font-weight: 400;
+	}
+	&__p, &__quote {
+		font-weight: 300;
+		line-height: 1.25rem;
+		max-width: clamp(17rem, 34vw, 36rem);
+		//max-width: 36rem;
+	}
+	&__quote {
+		font-style: italic;
+	}
+
+	&__picture {
+		filter: grayscale(100%) brightness(0.9) contrast(1000%);
+        
+        image-rendering: pixelated;
+
+
+		width: clamp(12rem, 21.3vw, 16rem);
+		height: auto;
+	}
+
+	@media screen and (max-width: 1024px) {
+		flex-direction: column;
+	}
+}
+.other-brainrots-div {
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	gap: 2rem;
+
+	padding-bottom: 4rem;
+}
+
+
+/* --- About page --- */
+.about {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	padding-bottom: 4rem;
+
+	
+	&__about-div-title {
+		padding-top: clamp(4rem, 10vw, 5rem);
+
+		text-align: center;
+		font-family: 'Terminus';
+		color: white;
+
+
+
+		font-weight: 500;
+		font-size: clamp(3rem, 10vw, 6rem);
+		padding-bottom: px2rem(16);
+	}
+	&__about-div-infos {
+		padding-top: 4rem;
+
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 4rem;
+	}
+}
+.about-infobubble {
+	padding: 2rem 5rem;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	gap: 2rem;
+
+	background-color: #1900ff;
+	color: white;
+
+	&:hover {
+			background-color: black;
+			color: #ffffff;
+		}
+
+	&__text {
+		font-family: 'Terminus';
+		font-weight: 300;
+		line-height: 1.25rem;
+
+		text-align: left;
+
+		max-width: 24rem;
+	}
+}
+
+.about-infobubble__a{
+	color: #00a800;
+}
+
+.about-form {
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+	gap: 1rem;
+	
+	font-weight: 400;
+}
+.about-form, .about-form__button, .about-form__input, .about-form__textarea {
+	font-family: 'Terminus';
+}
+.about-form__button {
+	font-family: 'terminus';
+	border: none;
+	background: none;
+	padding: 0.5rem 2rem;
+	color: black;
+	background-color: #00ff00;
+
+	&:hover {
+		cursor: pointer;
+		background-color: rgb(0, 0, 0);
+		color: white;
+	}
+	
+}
+.about-form__input, .about-form__textarea {
+	font-weight: 300;
+	background: #000000;
+	color: white;
+    padding: 0.5rem;
+    width: 100%; 
+    max-width: 20rem;
 }
 
 /* --- Misc. --- */
@@ -559,20 +732,21 @@ html {
 
 	width: clamp(240px, 50vw, 640px);
 	
-	filter: $effect-filter-img-drop-shadow-tiny;
+	
 
-	&:hover img, &:hover h3 {
-		filter: none;
-	}
+
 
 	& img {
 		display: block;
 		width: 100%;
 		height: auto;
 
-		filter: brightness(0.25);
+		filter: grayscale(100%) brightness(0.9) contrast(1000%);
+        
+        image-rendering: pixelated;
 
-		transition: filter 150ms ease-in-out;
+
+
 	}
 	& svg {
 		position: absolute;
@@ -581,13 +755,17 @@ html {
 		transform: translate(-50%, -50%);
 
 		width: clamp(4rem, 17.9vw, 6.25rem);
+
+		 filter: grayscale(100%) brightness(0.9) contrast(1000%);
+        
+        image-rendering: pixelated;
 	}
 	& h3 {
 		text-align: center;
 		color: white;
 		text-decoration: none;
 		font-size: clamp(0.6rem, 2.5vw, 1.5rem);
-		font-family: 'Rubik';
+		font-family: 'Terminus';
 		font-weight: 300;
 		width: 100%;
 
