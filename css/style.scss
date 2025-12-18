@@ -577,7 +577,7 @@ html {
 		display: flex;
 		justify-content: center;
 		flex-wrap: wrap;
-		//gap: 10rem;
+		gap: 4rem;
 	}
 }
 .about-infobubble {
@@ -602,6 +602,39 @@ html {
 
 		max-width: 24rem;
 	}
+}
+.about-form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+	
+	font-weight: 400;
+}
+.about-form, .about-form__button, .about-form__input, .about-form__textarea {
+	font-family: 'Rubik';
+}
+.about-form__button {
+	font-family: 'Rubik';
+	border: none;
+	background: none;
+
+	padding: 0.5rem 2rem;
+
+	border-radius: 16px;
+
+	color: white;
+
+	background-color: rgb(169, 70, 255);
+
+	&:hover {
+		cursor: pointer;
+		background-color: rgb(176, 85, 255);
+	}
+	
+}
+.about-form__input, .about-form__textarea {
+	font-weight: 300;
 }
 /* --- Misc. --- */
 .a-button {
@@ -690,23 +723,4 @@ html {
 .image {
 	//color: white;
 	font-family: 'sans-serif';
-}
-.form {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	gap: 0.5rem;
-
-	padding: 2rem 5rem;
-	border-radius: 32px;
-
-	background-color: red;
-
-	box-shadow: $effect-box-shadow;	
-
-
-	font-family: 'Rubik';
-	font-weight: 400;
-	font-size: 18px;
 }

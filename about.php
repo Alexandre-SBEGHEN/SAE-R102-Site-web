@@ -50,23 +50,21 @@
                         <p class="about-infobubble__text">Puisqu'il s'agit de notre tout premier site web, nous aimerions beaucoup savoir ce que vous pensez de ce dernier. C'est pourquoi nous vous proposons de remplir le formulaire ci-dessous afin que vous puissiez laisser un petit commentaire à propos votre visite sur Brainrot City. Votre avis compte !</p>
                     
                         <!-- The form -->
-                        <div>
-                            <form action="https://formspree.io/f/mlgredyp" method="POST">
-                                <label for="nom">Nom :</label>
-                                <input type="text" id="nom" name="nom" required>
+                        <form class="about-infobubble__about-form about-form" action="https://formspree.io/f/mlgredyp" method="POST">
+                            <label class="about-form__label" for="nom">Nom :</label>
+                            <input class="about-form__input" type="text" id="nom" name="nom" required>
 
-                                <label for="prenom">Prénom :</label>
-                                <input type="text" id="prenom" name="prenom" required>
+                            <label class="about-form__label" for="prenom">Prénom :</label>
+                            <input class="about-form__input" type="text" id="prenom" name="prenom" required>
 
-                                <label for="email">E-mail :</label>
-                                <input type="email" id="email" name="email" required>
+                            <label class="about-form__label" for="email">E-mail :</label>
+                            <input class="about-form__input" type="email" id="email" name="email" required>
 
-                                <label for="avis">Avis :</label>
-                                <textarea id="avis" name="avis" required></textarea>
+                            <label class="about-form__label" for="avis">Avis :</label>
+                            <textarea class="about-form__textarea" id="avis" name="avis" required></textarea>
 
-                                <button type="submit">Envoyer</button>
-                            </form>
-                        </div>
+                            <button class="about-form__button" type="submit">Envoyer</button>
+                        </form>
                     </div>
                 </div>
             </div>
