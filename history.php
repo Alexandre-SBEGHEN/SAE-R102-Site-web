@@ -33,20 +33,20 @@
             <article id="history-of-brainrots" class="main__history-article history-article">
                 <!-- Section 1 : Title & paragraph -->
                 <div class="history-article__history-article-div history-article-div history-article-div--1">
-                    <h2 class="history-article__title">History of Brainrots</h2>
-                    <p class="history-article__history-article-paragraph history-article-paragraph history-article-paragraph--large">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sagittis sem lorem, in vehicula nisi aliquet quis. Phasellus eu lectus in neque varius euismod. Vestibulum et mollis purus, sed fringilla dolor. Donec sed pretium orci. Morbi pulvinar lacus vitae velit imperdiet accumsan. Praesent lectus eros, finibus posuere rhoncus tincidunt, imperdiet id odio. Vestibulum dui nulla, venenatis placerat fermentum non, fermentum eget arcu.</p>
+                    <h2 class="history-article__title"><?php echo $translations->$lang_current->pages->history->history_title; ?></h2>
+                    <p class="history-article__history-article-paragraph history-article-paragraph history-article-paragraph--large"><?php echo $translations->$lang_current->pages->history->history_p1; ?></p>
                 </div>  
 
                 <!-- Section 2 : Image & description -->
                 <div class="history-article__history-article-div history-article-div history-article-div--2">
                     <img class="image history-article__picture" src="assets/images/misc/strawberry_elephant.avif" alt="The Strawberry Elephant" loading="lazy">
-                    <p class="history-article__history-article-paragraph history-article-paragraph history-article-paragraph--tiny">Suspendisse pretium consectetur nulla. Integer bibendum quam nulla. Etiam elit ipsum, egestas non volutpat posuere, fringilla ut nulla. Nullam enim tortor, hendrerit sed ultricies sit amet, commodo nec ex. Phasellus viverra elit urna, at mollis purus semper nec. Maecenas posuere gravida nunc, id elementum mauris molestie dapibus. In hac habitasse platea dictumst. Mauris tristique nibh quis maximus laoreet. Nam luctus rutrum quam non lacinia. In viverra pellentesque egestas. Cras luctus elementum lacus, eget porta odio ultrices eu. Suspendisse potenti. Mauris molestie eros enim, ac mollis neque pharetra a. Morbi a lacus feugiat, lobortis urna a, maximus est. Vivamus vitae faucibus tortor, venenatis elementum mi. Morbi eu mi elit.</p>
+                    <p class="history-article__history-article-paragraph history-article-paragraph history-article-paragraph--tiny"><?php echo $translations->$lang_current->pages->history->history_p2; ?></p>
                     <img class="image history-article__picture" src="assets/images/misc/smurf_cat.avif" alt="Smurf Cat" loading="lazy">
                 </div>
 
                 <!-- Section 3 : Image & conclusion -->
                 <div class="history-article__history-article-div history-article-div history-article-div--3">
-                    <p class="history-article__history-article-paragraph history-article-paragraph history-article-paragraph--medium">Nullam tincidunt porta feugiat. In hac habitasse platea dictumst. Vivamus tempor eget mi nec fringilla. Donec libero ex, tristique ut rhoncus eget, laoreet ut metus. Pellentesque neque lacus, luctus nec arcu sed, semper pellentesque tellus. Sed ultrices tortor sit amet nibh lobortis, vel eleifend risus malesuada. Vivamus porttitor condimentum aliquam. Suspendisse vel magna ut augue luctus tincidunt ac et tortor.</p>
+                    <p class="history-article__history-article-paragraph history-article-paragraph history-article-paragraph--medium"><?php echo $translations->$lang_current->pages->history->history_p3; ?></p>
                     <img class="history-article__picture" src="assets/images/misc/tralalero_tralala.avif" alt="Tralalero Tralala" loading="lazy">
                 </div>
 
@@ -60,8 +60,8 @@
 
                         <h3>BRAINROT MEME (2025-2060) : Offical Music</h3>
                     </a>
-                    <p class="history-article__history-article-paragraph history-article-paragraph history-article-paragraph--medium">Nam porttitor ex sapien, in luctus ipsum aliquam nec. Cras dui erat, consequat ac dolor eget, commodo luctus ex. Phasellus facilisis eleifend libero quis venenatis. Integer ligula augue, pretium nec sagittis porttitor, dapibus pharetra magna. Proin bibendum vulputate urna, non elementum turpis eleifend dictum. Nunc tempus tellus sit amet quam dapibus, eget varius arcu efficitur. Aliquam erat volutpat. Aliquam iaculis condimentum dignissim. Quisque bibendum, magna et rutrum posuere, lectus lacus ultrices neque, id rhoncus turpis leo sit amet diam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur velit leo, venenatis nec libero sit amet, congue aliquam orci.</p>
-                    <p class="history-article__history-article-paragraph history-article-paragraph history-article-paragraph--large">Phasellus nisl lorem, fringilla at nibh lobortis, ultrices scelerisque massa. Nulla convallis risus at auctor condimentum. Donec nec bibendum odio, vitae hendrerit libero. Phasellus ultrices ac ligula vitae finibus. Proin vehicula leo at mollis tincidunt. Nulla blandit ac nibh a ornare. Mauris erat mi, convallis nec tristique eleifend, tempus ut ex. Aenean lectus magna, posuere vel ligula scelerisque, sollicitudin rutrum urna.</p>
+                    <p class="history-article__history-article-paragraph history-article-paragraph history-article-paragraph--medium"><?php echo $translations->$lang_current->pages->history->history_p4; ?></p>
+                    <p class="history-article__history-article-paragraph history-article-paragraph history-article-paragraph--large"><?php echo $translations->$lang_current->pages->history->history_p5; ?></p>
                 </div>
 
 
