@@ -104,6 +104,7 @@ html {
 	padding: 1rem 3rem;
 	
 	@media screen and (max-width: px2rem(1024)) {
+		flex-direction: column;
 		justify-content: center;
 		column-gap: px2rem(128);
 		padding: 1rem 1rem;

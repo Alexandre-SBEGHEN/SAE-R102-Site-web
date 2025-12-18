@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="<?php $docname=get_page_name(); echo $translations->$lang_current->pages->e404->meta_desc; ?>">
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="/css/style.css">
         <title><?php $docname=get_page_name(); echo $translations->$lang_current->docname->$docname; ?></title>
     </head>
     <body class="body">
@@ -30,7 +30,7 @@
 
                 <!-- Image of sad Tung Tung Tung Sahur -->
                 <div class="e404__e404-div e404-div e404-div--picture">
-                    <img width="256" class="e404__picture" src="assets/images/misc/sad_sahur.avif" alt="<?php echo $translations->$lang_current->pages->e404->sad_sahur_alt; ?>">
+                    <img width="256" class="e404__picture" src="/assets/images/misc/sad_sahur.avif" alt="<?php echo $translations->$lang_current->pages->e404->sad_sahur_alt; ?>">
                 </div>
             </div>
         </main>

@@ -208,6 +208,7 @@ html {
 }
 @media screen and (max-width: 64rem) {
   .header {
+    flex-direction: column;
     justify-content: center;
     -moz-column-gap: 8rem;
          column-gap: 8rem;
