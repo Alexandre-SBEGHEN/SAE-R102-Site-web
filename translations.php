@@ -88,6 +88,13 @@ $translations_string = '{
                 },
                 
                 "other_brainrots": "Other Brainrots"
+            },
+            "about": {
+                "about_us": "Who are we ?",
+
+
+
+                "legal_notices": "Legal notices"
             }
         }
     }
