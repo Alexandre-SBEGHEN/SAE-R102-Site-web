@@ -662,6 +662,20 @@ table {
   max-width: 20rem;
 }
 
+.footer__legal-notices {
+  text-decoration: none;
+  position: absolute;
+  font-family: "Terminus";
+  color: white;
+  left: 1rem;
+}
+.footer__legal-notices::before {
+  content: "cat";
+  margin-right: 0.3rem;
+  color: #1900ff;
+  font-weight: bold;
+}
+
 /* --- Misc. --- */
 .a-button {
   display: flex;
