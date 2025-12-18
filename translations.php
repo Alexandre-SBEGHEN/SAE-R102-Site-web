@@ -90,7 +90,7 @@ $translations_string = '{
                 "other_brainrots": "Other Brainrots"
             },
             "about": {
-                "about_us": "Who are we ?",
+                "about_us": "Who are we?",
 
 
 
@@ -100,9 +100,6 @@ $translations_string = '{
     }
 }';
 $translations = json_decode($translations_string);
-
-//Démarrer la session
-session_start();
 
 //Langage par défaut
 define('DEFAULT_LANGUAGE', 'en');

@@ -3,7 +3,7 @@
                 <a class = "navbar-logo-sitename__link" href="/">
                     <img width="48" height="48" class="image navbar-logo-sitename__logo" src="/assets/images/nav/brain.avif" alt="Website's logo" loading="lazy">
                 </a>
-                <h1 class="navbar-logo-sitename__title">BRAINROT</h1>
+                <h1 class="navbar-logo-sitename__title">BRAINROT CITY</h1>
             </div>
 
             <nav class="header__navbar-nav navbar-nav">

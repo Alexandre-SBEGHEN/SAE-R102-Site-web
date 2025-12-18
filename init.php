@@ -1,7 +1,13 @@
 <?php
 
+//Démarrer la session
+session_start();
+
 //Initialiser le fichier de traductions des textes
 require('translations.php');
+
+//Initialiser le fichier des themes
+require('theme.php');
 
 //Fonction pour obtenir le nom du script actuel
 function get_script_name() {

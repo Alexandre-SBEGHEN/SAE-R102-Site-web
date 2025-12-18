@@ -7,7 +7,9 @@
         <meta name="description" content="<?php $docname=get_page_name(); echo $translations->$lang_current->pages->index->meta_desc; ?>">
         <!--<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">-->
         <link rel="icon" href="/favicon.png" type="image/png">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/<?php
+            echo ($site_theme == 'normal') ? 'style' : 'style-alt';
+        ?>.css">
         <title><?php $docname=get_page_name(); echo $translations->$lang_current->docname->$docname; ?></title>
     </head>
     <body class="body">
@@ -26,9 +28,9 @@
 
                 <!-- The 3 images -->
                 <div class="homescreen__homescreen-div homescreen-div--pictures">
-                    <img width="256" class="homescreen__picture" src="assets/images/roster/preview/chimpanzini.avif" alt="Chimpanzini Bananini">
-                    <img width="256" class="homescreen__picture" src="assets/images/roster/preview/brr_patapim.avif" alt="Brr Brr Patapim">
-                    <img width="256" class="homescreen__picture" src="assets/images/roster/preview/tung_sahur.avif" alt="Tung Tung Tung Sahur">
+                    <a href="roster_card.php?brname=chimpanzini"><img width="256" class="homescreen__picture" src="assets/images/roster/preview/chimpanzini.avif" alt="Chimpanzini Bananini"></a>
+                    <a href="roster_card.php?brname=brr_patapim"><img width="256" class="homescreen__picture" src="assets/images/roster/preview/brr_patapim.avif" alt="Brr Brr Patapim"></a>
+                    <a href="roster_card.php?brname=tung_sahur"><img width="256" class="homescreen__picture" src="assets/images/roster/preview/tung_sahur.avif" alt="Tung Tung Tung Sahur"></a>
                 </div>
             </div>
         </main>

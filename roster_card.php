@@ -7,7 +7,9 @@
         <meta name="description" content="<?php echo 'This is the page dedicated to the ', $cards->$name->name, ' Brainrot character. Learn more about it.' ?>">
         <!--<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">-->
         <link rel="icon" href="/favicon.png" type="image/png">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/<?php
+            echo ($site_theme == 'normal') ? 'style' : 'style-alt';
+        ?>.css">
         <title><?php echo $cards->$name->name, ' - Brainrot City'; ?></title>
     </head>
     <body class="body">
@@ -53,6 +55,7 @@
             <!-- Go back to other brainrots -->
             <div class="main__other-brainrots-div other-brainrots-div">
                 <a class="buttons__a-button a-button a-button" href="roster.php"><?php echo $translations->$lang_current->pages->roster_card->other_brainrots; ?></a>
+                <a class="buttons__a-button a-button a-button a-button--transparent" href="/"><?php echo $translations->$lang_current->pages->e404->back_to_home; ?></a>
             </div>
         </main>
     </body>
